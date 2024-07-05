@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Matchless Slider</title>
+
+    <style>
+        .matchless-slider-container-main{
+            position: relative;
+            max-width: 1250px;
+        }
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+            cursor: grab;
+        }
+
+
+        .slide {
+            flex: 0 0 calc(100% / 4);
+            max-width: calc(100% / 4);
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .slide img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .text {
+            width: 90%;
+            border-radius: 0px 0px 30px 30px;
+            background-color: rgba(0, 0, 0, 0.232);
+            height: 120px;
+            margin: -80px auto 0px auto;
+        }
+        .text p{
+            padding-top: 60px;
+        }
+
+        .prev-btn,
+        .next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #424242;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 1;
+            font-size: 24px;
+            color: white;
+        }
+
+        .prev-btn:hover{
+            color: red;
+        }
+        .next-btn:hover{
+            color: red;
+        }
+
+        .prev-btn {
+            left: 0%;
+        }
+
+        .next-btn {
+            right: 0;
+        }
+        /* Responsive CSS */
+        @media (max-width: 768px) {
+            .slide {
+                flex: 0 0 calc(100% / 2);
+                max-width: calc(100% / 2);
+            }
+            .text {
+            width: 72%;
+            height: 120px;
+            margin: -80px auto 0px auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .slide {
+                flex: 0 0 calc(100% / 1);
+                max-width: calc(100% / 1);
+            }
+            .text {
+            width: 66%;
+            height: 120px;
+            margin: -80px auto 0px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="matchless-slider-container-main">
+
+   
+    <div class="slider-container">
+        <div class="slider">
+            <!-- Cloned slides for seamless loop effect -->
+
+            <div class="slide">
+                <div class="match-slide-inner">
+                    <img src="./Images/matchless cart (2).png" alt="Slide 5">
+                    <div class="text"><p>Electronics</p></div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="match-slide-inner">
+                <img src="./Images/matchless cart (4).png" alt="Slide 1">
+                <div class="text"><p>Lawn Care</p></div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="match-slide-inner">
+                <img src="./Images/matchless cart (5).png" alt="Slide 2">
+                <div class="text"><p>Medical</p></div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="match-slide-inner">
+                <img src="./Images/matchless cart (1).png" alt="Slide 3">
+                <div class="text"><p>Automotive</p></div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="match-slide-inner">
+                <img src="./Images/matchless cart (3).png" alt="Slide 4">
+                <div class="text"><p>Agricultural</p></div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="match-slide-inner">
+                <img src="./Images/matchless cart (2).png" alt="Slide 5">
+                <div class="text"><p>Electronics</p></div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="match-slide-inner">
+                <img src="./Images/matchless cart (4).png" alt="Slide 1">
+                <div class="text"><p>Lawn Care</p></div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="match-slide-inner">
+                <img src="./Images/matchless cart (5).png" alt="Slide 2">
+                <div class="text"><p>Medical</p></div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="match-slide-inner">
+                <img src="./Images/matchless cart (1).png" alt="Slide 3">
+                <div class="text"><p>Automotive</p></div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="match-slide-inner">
+                <img src="./Images/matchless cart (3).png" alt="Slide 4">
+                <div class="text"><p>Agricultural</p></div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="match-slide-inner">
+                <img src="./Images/matchless cart (2).png" alt="Slide 5">
+                <div class="text"><p>Electronics</p></div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="match-slide-inner">
+                <img src="./Images/matchless cart (4).png" alt="Slide 1">
+                <div class="text"><p>Lawn Care</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="prev-btn" aria-label="Previous Slide"><i class="fa-solid fa-angle-left"></i></button>
+    <button class="next-btn" aria-label="Next Slide"><i class="fa-solid fa-angle-right"></i></button>
+
+
+</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let slideWidth = slides[0].offsetWidth;
+            const slideMargin = parseInt(window.getComputedStyle(slides[0]).marginRight) || 0;
+            let currentIndex = 1; // Start from the first original slide
+
+            function setSliderPosition() {
+                slider.style.transition = 'none';
+                slider.style.transform = `translateX(-${(slideWidth + slideMargin) * currentIndex}px)`;
+                setTimeout(() => {
+                    slider.style.transition = 'transform 0.5s ease';
+                });
+            }
+
+            slider.style.transform = `translateX(-${(slideWidth + slideMargin) * currentIndex}px)`;
+
+            window.addEventListener('resize', () => {
+                slideWidth = slides[0].offsetWidth;
+                setSliderPosition();
+            });
+
+            function slide(direction) {
+                if (direction === 'next') {
+                    currentIndex++;
+                    if (currentIndex === slides.length - 3) {
+                        setTimeout(() => {
+                            currentIndex = 3;
+                            setSliderPosition();
+                        }, 500);
+                    }
+                } else if (direction === 'prev') {
+                    currentIndex--;
+                    if (currentIndex < 1) {
+                        setTimeout(() => {
+                            currentIndex = slides.length - 5;
+                            setSliderPosition();
+                        }, 500);
+                    }
+                }
+                slider.style.transition = 'transform 0.5s ease';
+                slider.style.transform = `translateX(-${(slideWidth + slideMargin) * currentIndex}px)`;
+            }
+
+            prevBtn.addEventListener('click', () => slide('prev'));
+            nextBtn.addEventListener('click', () => slide('next'));
+
+            let isDragging = false;
+            let startPos = 0;
+            let currentTranslate = 0;
+            let prevTranslate = 0;
+            let animationID = 0;
+
+            slider.addEventListener('mousedown', startDrag);
+            slider.addEventListener('touchstart', startDrag);
+            slider.addEventListener('mouseup', endDrag);
+            slider.addEventListener('mouseleave', endDrag);
+            slider.addEventListener('touchend', endDrag);
+            slider.addEventListener('mousemove', drag);
+            slider.addEventListener('touchmove', drag);
+
+            function startDrag(e) {
+                isDragging = true;
+                startPos = getPositionX(e);
+                animationID = requestAnimationFrame(animation);
+                slider.style.cursor = 'grabbing';
+            }
+
+            function endDrag() {
+                isDragging = false;
+                cancelAnimationFrame(animationID);
+                const movedBy = currentTranslate - prevTranslate;
+                if (movedBy < -100) slide('next');
+                else if (movedBy > 100) slide('prev');
+                else slider.style.transform = `translateX(-${(slideWidth + slideMargin) * currentIndex}px)`;
+                prevTranslate = currentTranslate;
+                slider.style.cursor = 'grab';
+            }
+
+            function drag(e) {
+                if (isDragging) {
+                    const currentPosition = getPositionX(e);
+                    currentTranslate = prevTranslate + currentPosition - startPos;
+                }
+            }
+
+            function getPositionX(event) {
+                return event.type.includes('mouse') ? event.clientX : event.touches[0].clientX;
+            }
+
+            function animation() {
+                slider.style.transform = `translateX(${currentTranslate}px)`;
+                if (isDragging) requestAnimationFrame(animation);
+            }
+        });
+    </script>
+</body>
+</html>
